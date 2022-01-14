@@ -7,7 +7,7 @@ from chatterbot.trainers import ListTrainer
 import time
 import random 
 import math
-
+     
 
 #TODO: CLEAR
 def clear():
