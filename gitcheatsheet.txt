@@ -1,0 +1,5 @@
+git clone "url" --> clone repository
+git add . --> add files
+git commit -m "asdfasdf" --> stage files for commiting, replace gobbledegook with message
+git push --> actually push the changes 
+git pull --> pull changes   
