@@ -10,7 +10,7 @@ color_assoc = ['green','green','green','green','green','green','green']
 Colors = ('green', 'red', 'orange', 'yellow')
 
 
-def get_colors(ratings):
+def get_colors(ratings: list):
     counter = 0
     print("Ratings = {}".format(ratings))
     for rate in ratings:
@@ -37,9 +37,25 @@ def show_graph (Mood_Rating):
 
 
 
-def data (filename):
+
+
+
+
+
+
+
+def getdata(filename):
     mood = []
-    file = open(filename,"r")
+    for i in open(filename,"r"):
+        for val in i.split(','):
+            val = int(val)
+            mood.append(val)
+
+    return mood
+
+def writedata(value,filename):
+    mood = []
+    file = open(filename,"w")
     for data in file:
         data = data.strip("\n")
         mood.append(int(data))

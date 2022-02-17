@@ -12,7 +12,7 @@ def day_rating(Mood_Rating):
         # print(__day)
         feeling = input("Jae: How are you feeling today on a scale of 1-5?")
         Mood_Rating[__day + 1] += int(feeling)
-        return 1
+        return int(feeling)
     except ValueError:
         print("Needs to be a number")
         return -1;

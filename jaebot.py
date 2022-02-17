@@ -124,5 +124,6 @@ while tasks != "goodbye":
             print("Jae: Okay, here is your current mood status:")
             exbar.show_graph(Mood_Rating)
         elif "input" in tracker.lower():                
-            bargraphtest.day_rating(exbar.Mood_Rating)
+            feeling = bargraphtest.day_rating(exbar.Mood_Rating)
+
                 
