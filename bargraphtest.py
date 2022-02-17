@@ -1,4 +1,4 @@
-#bar graph
+#TODO: INPUT INTERFACE
 
 import matplotlib.pyplot as plt
 
@@ -9,8 +9,8 @@ def day_rating(Mood_Rating):
     try:
         import datetime
         __day = datetime.datetime.today().weekday()
-        print(__day)
-        feeling = input("Jae: How are you feeling?")
+        # print(__day)
+        feeling = input("Jae: How are you feeling today on a scale of 1-5?")
         Mood_Rating[__day + 1] += int(feeling)
         return 1
     except ValueError:

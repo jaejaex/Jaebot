@@ -7,7 +7,10 @@ from chatterbot.trainers import ListTrainer
 import time
 import random 
 import math
-     
+import bargraphtest
+import exbar
+from exbar import Mood_Rating 
+
 
 #TODO: CLEAR
 def clear():
@@ -54,11 +57,11 @@ if "okay" in feeling:
 
 #FIXME: TASKS
 
+tasks = ""
+while tasks != "goodbye":
 
-while True:
 
-
-    time.sleep(2)
+    time.sleep(1)
     tasks = input("Jae: How may I help you? ")
 
 
@@ -77,15 +80,15 @@ while True:
 #TODO: 8BALL
         if "magic 8-ball" in games.lower(): 
             eight_ball_question = input("Jae: Okay! Ask me a yes or no question. ")
-            time.sleep(3)
+            time.sleep(2)
             print(random.choice(eight_ball_responses)) 
             time.sleep(2)
             eight_ball_again = input("Jae: Would you like to play again?")
             if "Yes" in eight_ball_again:
                 while True:
-                    time.sleep(2)
+                    time.sleep(1)
                     eight_ball_question = input("Jae: Okay! Ask me a yes or no question. ")
-                    time.sleep(3)
+                    time.sleep(2)
                     print(random.choice(eight_ball_responses)) 
                     time.sleep(2)
                     eight_ball_again = input("Jae: Would you like to play again?")
@@ -114,14 +117,12 @@ while True:
                 print("Jae: Okay!")
 #TODO: MOOD TRACKER
     elif "mood tracker" in tasks.lower():
-        time.sleep(2)
+        time.sleep(1)
         tracker = input("Jae: Would you like to view your current tracker or input a value for today?")
         if "tracker" in tracker.lower():
-            while True:
-                time.sleep(2)
-                print("Jae: Okay, here is your current mood status:")
-                show_graph()
-        if "input" : "value" in tracker.lower()
-        while True:
-                time.sleep(2)
-           #run bargraphtest.py
+            time.sleep(1)
+            print("Jae: Okay, here is your current mood status:")
+            exbar.show_graph(Mood_Rating)
+        elif "input" in tracker.lower():                
+            bargraphtest.day_rating(exbar.Mood_Rating)
+                

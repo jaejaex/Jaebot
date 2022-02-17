@@ -1,10 +1,4 @@
-#EXAMPLE OUTPUT BARGRAPH
-
-#SAVING 
-
-#TODO: Need to do stuff lpease gelp me I need to get into the mental hiostpital
-# FIXME: FIXME:
-
+#FIXME: OUTPUT BARGRAPH
 
 
 import matplotlib.pyplot as plt
@@ -15,9 +9,7 @@ Mood_Rating = [0,0,0,0,0,0,0]
 color_assoc = ['green','green','green','green','green','green','green']
 Colors = ('green', 'red', 'orange', 'yellow')
 
-# for every value in Mood_rating: figure out what color corresponds
-# for loop to iterate through mood_rating 
-# if mood rating = 1 then color red
+
 def get_colors(ratings):
     counter = 0
     print("Ratings = {}".format(ratings))
@@ -33,14 +25,8 @@ def get_colors(ratings):
             color_assoc[counter] = 'green' 
         counter+=1
 
-x = bargraphtest.day_rating(Mood_Rating)
 
-if x == 1:
-	show_graph() 
-	
-
-
-def show_graph () -> None:
+def show_graph (Mood_Rating):
 	get_colors(Mood_Rating)
 	plt.bar(Day_of_the_Week, Mood_Rating, color=color_assoc)
 	plt.title("Your Mood Chart for the Week", fontsize=16)
@@ -49,5 +35,12 @@ def show_graph () -> None:
 	plt.show()
 
 
-# if "1" in Mood_Rating:
-#   Colors = ('red')
+
+
+def data (filename):
+    mood = []
+    file = open(filename,"r")
+    for data in file:
+        data = data.strip("\n")
+        mood.append(int(data))
+    return mood
